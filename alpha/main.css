@@ -1,0 +1,64 @@
+body {
+	line-height : 1.5em;
+	background : pink;
+  background-image: linear-gradient(#eee 1px, transparent 1px);
+  background-size: 100% 1.5em;
+}
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+.parallax {
+  perspective: 1px;
+	position : relative;
+font-size : 200%;	
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.parallax__layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.parallax__layer--base {
+  transform: translateZ(0);
+}
+.parallax__layer--back {
+  transform: translateZ(-1px) scale(2);
+}
+
+
+
+
+h1, h2, h3, h4, h5, h6, p {
+	margin : 0;
+}
+h1 {
+	font-size : 2em;
+	margin : 0;
+	line-height : 1.5em;
+	margin-bottom : 0.75em;
+}
+
+h2 {
+	font-size : 1.5em;
+	margin-bottom : 1em;
+}
+h3 {
+	font-size : 1.5em;
+	margin-bottom : 1em;
+}
+
+p {
+	margin-bottom : 1.5em;
+}
+
+

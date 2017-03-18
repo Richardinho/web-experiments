@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel='stylesheet' href='reset.css'>
+    <style>
+
+        body {
+            background-image : url('carracci_triumph_of_bacchus.jpg');
+        }
+        [role=banner] {
+            font-family : helvetica;
+            position : fixed;
+            top : 0;
+            left : 0;
+            width : 100%;
+            padding : 20px;
+        }
+        .banner-background {
+            position : absolute;
+            transform-origin : top left;
+            left : 0;
+            top : 0;
+            bottom : 0;
+            right : 0;
+        }
+        h1 {
+            display : inline-block;
+            line-height : 1;
+            transform-origin : left top;
+            position : relative;
+        }
+
+        .content {
+            padding : 12px;
+            padding-top : 100px;
+        }
+        .content p {
+            font-size : 2em;
+            padding : 12px 0;
+        }
+
+        /* animation
+
+            The idea is that this should restore the element to its normal size
+        */
+
+        @keyframes reduceBanner {
+            from {
+                background-color : transparent;
+            }
+            to {
+                background-color : black;
+                transform :  scale(1) translateX(0) translateY(0);
+            }
+        }
+
+        @keyframes reduceText {
+            from { color : white; }
+            to {
+                transform : scale(1);
+                color : gold;
+            }
+        }
+
+        .animation-reduce h1 {
+            animation-name : reduceText;
+            animation-duration : 1s;
+            animation-timing-function : ease;
+        }
+
+        .animation-reduce .banner-background {
+            animation-name : reduceBanner;
+            animation-duration : 1s;
+            animation-timing-function : ease;
+        }
+
+        @keyframes expandBanner {
+            from {
+                background-color : black;
+            }
+            to {
+                background-color : transparent;
+                transform :  scale(1) translateX(0) translateY(0);
+            }
+        }
+
+        @keyframes expandText {
+            from {
+                color : gold;
+
+            }
+            50% {
+                transform : translateX(20px);
+            }
+            to {
+                transform : scale(1);
+                color : white;
+            }
+        }
+
+        .animation-expand h1 {
+            animation-name : expandText;
+            animation-duration : 1s;
+            animation-timing-function : ease;
+        }
+
+        .animation-expand .banner-background {
+            animation-name : expandBanner;
+            animation-duration : 1s;
+            animation-timing-function : ease;
+        }
+
+    </style>
+
+
+</head>
+<body>
+    <div role="banner" class=''>
+        <div class='banner-background'></div>
+        <h1>HXljldjljdl</h1>
+    </div>
+    <div class='content'>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+
+    <script src='banner-reducing-effect.js'></script>
+
+</body>
+
+</html>

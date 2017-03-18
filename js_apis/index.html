@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+
+
+</head>
+<body>
+
+	<h1>Form </h1>
+	<form name='myForm' enctype="multipart/form-data" target='POST' action='/foo.php' method='POST'>
+
+		<label><input type='text' name='alpha'/></label>
+		<label><input type='text' name='beta'/></label>
+
+		<select autofocus required name='myselect' size='2'>
+			<option value="value1">Value 1</option> 
+  		<option value="value2" selected>Value 2</option>
+  		<option value="value3">Value 3</option>
+		</select>
+
+		<select multiple name='multselect'>
+			<optgroup label='first'>
+				<option value='foo'>This is foo</option>
+				<option value='bar'>this is bar</option>
+			</optgroup>
+			<optgroup label='second'>
+				<option value='apple'>this is an apple</option>
+				<option value='lalal'>lalal</option>
+			</optgroup>
+		</select>
+
+		<button id='submit-button' type='submit'>submit</button>
+	</form>
+	<script src='main.js'></script>
+</body>
+</html>
