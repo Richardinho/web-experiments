@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>menu bar with drop down sub menus</title>
+
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="business-menu.css">
+    <style>
+
+        [aria-expanded=false] > [role=menu] {
+            display : none;
+        }
+
+        [aria-expanded=true] > [role=menu] {
+            display : inline-block;
+
+        }
+
+        p {
+            margin: 12px 0;
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+    <p tabindex="0">
+        lorem ipsum jlj
+    </p>
+    <ul class="business-menu" id="my-menu" role="menubar" data-orientation="horizontal">
+        <li role="menuitem">
+            <a href="/">Home</a></li>
+        <li role="menuitem" aria-haspopup="true" aria-expanded="false">
+            <a href="#services">Services</a>
+            <ul id="services" role="menu" data-orientation="vertical">
+                <li role="menuitem"><a href="generic-page.html">Audit & Assurance</a></li>
+                <li role="menuitem"><a href="generic-page.html">Business advisory services</a></li>
+                <li role="menuitem"><a href="generic-page.html">Cloud accounting</a></li>
+                <li role="menuitem"><a href="generic-page.html">Corporate finance</a></li>
+                <li role="menuitem"><a href="generic-page.html">Litigation Support</a></li>
+            </ul>
+        </li>
+        <li role="menuitem" aria-haspopup="true" aria-expanded="false">
+            <a href="#sectors">Sectors</a>
+            <ul id="sectors" role="menu" data-orientation="vertical">
+                <li role="menuitem"><a href="generic-page.html">Automotive</a></li>
+                <li role="menuitem"><a href="generic-page.html">Brewing and distilling</a></li>
+                <li role="menuitem"><a href="generic-page.html">Family Businesses</a></li>
+                <li role="menuitem"><a href="generic-page.html">Food & Drink</a></li>
+                <li role="menuitem" aria-haspopup="true" aria-expanded="false">
+                    <a href="#healthcare">Healthcare</a>
+                    <ul class="sub-menu" id="healthcare" role="menu" data-orientation="vertical">
+                        <li role="menuitem"><a href="generic-page.html">Aesthetics</a></li>
+                        <li role="menuitem"><a href="generic-page.html">Dentists</a></li>
+                        <li role="menuitem"><a href="generic-page.html">Doctors</a></li>
+                        <li role="menuitem"><a href="generic-page.html">Nursing homes</a></li>
+                    </ul>
+                </li>
+                <li role="menuitem"><a href="generic-page.html">Rural services</a></li>
+            </ul>
+        </li>
+        <li role="menuitem">
+            <a href="generic-page.html">News & blog</a>
+        </li>
+        <li role="menuitem" aria-haspopup="true" aria-expanded="false">
+            <a href="#careers">Careers</a>
+            <ul id="careers" role="menu" data-orientation="vertical">
+                <li role="menuitem"><a href="generic-page.html">Working at Campbell & Dallas</a></li>
+                <li role="menuitem"><a href="generic-page.html">Experienced Hire</a></li>
+                <li role="menuitem"><a href="generic-page.html">Graduate and Trainee</a></li>
+            </ul>
+        </li>
+        <li role="menuitem" aria-haspopup="true" aria-expanded="false">
+            <a href="#about-us">About us</a>
+            <ul id="about-us" role="menu" data-orientation="vertical">
+                <li role="menuitem"><a href="generic-page.html">Our story</a></li>
+                <li role="menuitem"><a href="generic-page.html">Our people</a></li>
+                <li role="menuitem"><a href="generic-page.html">Our locations</a></li>
+                <li role="menuitem"><a href="generic-page.html">Our awards</a></li>
+                <li role="menuitem"><a href="generic-page.html">Corporate social responsibility</a></li>
+            </ul>
+        </li>
+        <li role="menuitem">
+            <a href="generic-page.html">Contact us</a>
+        </li>
+    </ul>
+    <p tabindex="0">
+        lorem ipsum jlj
+    </p>
+    <script src="main.js"></script>
+</body>
+</html>

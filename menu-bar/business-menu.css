@@ -1,0 +1,37 @@
+.business-menu  {
+    display : flex;
+    background : cadetblue;
+    list-style : none;
+    justify-content : space-between;
+}
+
+.business-menu > li {
+    flex-grow : 1;
+    border : solid 1px red;
+    position : relative;
+}
+
+.business-menu a {
+    display : block;
+    text-align : center;
+    padding : 12px;
+}
+.business-menu a:hover {
+    background : pink;
+}
+
+[role=menu] {
+    position : absolute;
+    border : solid 2px green;
+    background : #ddd;
+}
+
+[role=menuitem] {
+    position : relative;
+}
+
+.business-menu .sub-menu {
+
+    left : 100%;
+    top : 0;
+}

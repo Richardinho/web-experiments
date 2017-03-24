@@ -75,8 +75,8 @@ function applyEffect() {
 
         let bannerHeight = banner.getBoundingClientRect().height;
         let headerHeight = header.getBoundingClientRect().height;
-        let headerTop = header.offsetTop;
-        let headerLeft = header.offsetLeft;
+        let headerTop = header.offsetTop; // dont need?
+        let headerLeft = header.offsetLeft; // dont need?
 
         return {
             bannerHeight,
@@ -85,6 +85,14 @@ function applyEffect() {
             headerLeft
         };
     }
+
+    // to: non scalable properties don't need to be set here.
+
+    /*
+    Ideal would be to have two states set in css stylesheets then parse these and distinguish between scalable
+    and non scalable properties e.g. font size and background color
+
+    */
 
     function onLoaded () {
 
@@ -109,8 +117,8 @@ function applyEffect() {
                 scaleBackground(firstDimensions, lastDimensions);
                 scaleHeader(firstDimensions, lastDimensions);
 
-                setExpandedHeaderColor();
-                setExpandedBackgroundColor();
+                setExpandedHeaderColor(); // not necessary!
+                setExpandedBackgroundColor(); // not necessary!
 
                 document.body.offsetHeight;
             },
@@ -195,6 +203,7 @@ function applyEffect() {
                 });
 
                 banner.classList.add('animation-expand');
+
 
             }
         };
