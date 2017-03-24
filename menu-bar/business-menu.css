@@ -1,29 +1,51 @@
 .business-menu  {
     display : flex;
-    background : cadetblue;
+    background : #323946;
+    font-size : 17px;
     list-style : none;
     justify-content : space-between;
+    font-family :helvetica;
+}
+
+.business-menu [role=menu] a {
+    font-size : 15px;
+    text-align : left;
 }
 
 .business-menu > li {
-    flex-grow : 1;
-    border : solid 1px red;
     position : relative;
+    flex-grow : 1;
+    padding : 0 20px;
+}
+
+.business-menu > li > a {
+    padding : 18px 12px;
 }
 
 .business-menu a {
+    position : relative;
     display : block;
     text-align : center;
+    text-decoration : none;
     padding : 12px;
+    color : white;
 }
-.business-menu a:hover {
-    background : pink;
+.business-menu > li > a:hover:before {
+    content : '';
+    display : block;
+    height : 2px;
+    left : 0;
+    width : 100%;
+    background : #0038a6;
+    top : -2px;
+    position : absolute;
 }
 
 [role=menu] {
     position : absolute;
-    border : solid 2px green;
-    background : #ddd;
+    background : #0038a6;
+    min-width : 250px;
+    left : 0;
 }
 
 [role=menuitem] {
@@ -34,4 +56,56 @@
 
     left : 100%;
     top : 0;
+    min-width : 300px;
+}
+.business-menu > [aria-haspopup] > a:after {
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 50%;
+    margin-top: -.2em;
+    margin-left: .3em;
+    /* right: 0; */
+    /* border-bottom: solid 20px green; */
+    border-right: solid .4em transparent;
+    border-top: solid .4em white;
+    border-left: solid .4em transparent;
+}
+
+.business-menu > [role=menuitem]:before {
+  position: absolute;
+  content: "";
+  width: 1px;
+  height: 30px;
+  right: 0;
+  top: calc(50% - 15px);
+  border-radius: 50%;
+  background: #fff;
+  opacity: .15;
+}
+.business-menu > [role=menuitem]:last-child:before {
+    content : none;
+}
+.business-menu > [role=menuitem] > [role=menu] > [role=menuitem] {
+    padding-right : 40px;
+}
+.business-menu > [role=menuitem] > [role=menu] > [role=menuitem][aria-haspopup=true]:before {
+   content : '';
+   display : inline-block;
+   position : absolute;
+   top : 50%;
+   margin-top : -.5em;
+   right : .5em;
+   border-left : solid .5em white;
+   border-bottom : solid .5em transparent;
+   border-top : solid .5em transparent;
+
+}
+
+.banner {
+    height : 100px;
+    margin : 0;
+    background : #323946;
 }
