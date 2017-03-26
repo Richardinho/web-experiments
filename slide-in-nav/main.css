@@ -1,0 +1,65 @@
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+.sliding-nav {
+
+    background : green;
+    position : fixed;
+    left : 20%;
+    top : 0;
+    width : 80%;
+    transform : translateX(100%);
+    border-left : solid 2px red;
+    border-right : solid 2px red;
+    transition : 1s transform ease;
+}
+
+#overlay {
+    position : fixed;
+    left : 0;
+    top : 0;
+    right : 0;
+    bottom : 0;
+    transform : translateX(100%);
+    background : red;
+    transition : 1s ease opacity;
+    opacity : 0;
+}
+.sliding-nav-header {
+    padding : 12px;
+    font-size : 3em;
+    background : blue;
+    font-family : helvetica;
+}
+
+.sliding-nav-menu-items {
+    list-style : none;
+    font-size : 2em;
+    overflow-y : scroll;
+}
+.sliding-nav-menu-item {
+    padding : 12px;
+    border-bottom : solid 2px cadetblue;
+}
+
+.main-content {
+    padding : 12px;
+    font-size : 1.4em;
+}
+
+.main-content p {
+    margin : 12px;
+}
+
+button {
+    background : cadetblue;
+    font-size : 1.4em;
+    border : none;
+    padding : 12px;
+}
