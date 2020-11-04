@@ -1,0 +1,41 @@
+body {
+  overflow: hidden;
+}
+
+.container {
+  background: pink;
+  perspective: 1px;
+  height: 1000px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.new-york {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateZ(-1px) scale(2); 
+}
+
+.inner-container {
+  background: yellow;
+  height: 1844px;
+  overflow: hidden;
+  position:  relative;
+}
+
+.header {
+  background: white;
+  height: 200px;
+  width: 100%;
+  position: absolute;
+}
+
+.foo {
+  height: 500px;
+  opacity: 0.5;
+  background: red;
+  width: 100%;
+}
+

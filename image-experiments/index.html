@@ -1,60 +1,19 @@
 <!doctype html>
 <html>
-<head>
-<link rel='stylesheet' href='reset.css'>
-<style>
-body {
-	overflow : hidden;
-}
-	.container {
-		background : pink;
-		perspective : 1px;
-		height : 1000px;
-		overflow-y : auto;
-		overflow-x : hidden;
-	}
-
-	.new-york {
-		display : block;
-		position : absolute;
-		top : 0;
-		left : 0;
-		transform : translateZ(-1px) scale(2); 
-
-
-	}
-	.inner-container {
-background : yellow;
-		height : 1844px;
-		overflow : hidden;
-		position : relative;
-	}
-	.header {
-		background : white;
-		height : 200px;
-		width : 100%;
-		position : absolute;
-
-	}
-	.foo {
-		height : 500px;
-		opacity : 0.5;
-		background : red;
-		width : 100%;
-	}
-</style>
-</head>
-<body>
-	<div class='container'>
-		<div class='inner-container'>
-			<img class='new-york' src='/img/2048px-NYC_Empire_State_Building.jpg' srcset="" alt="My default image">
-			<div class='header'></div>
-			<div class='foo'></div>
-			<div class='header'></div>
-			<div class='foo'></div>
-			<div class='header'></div>
-		</div>
-	</div>
-
-</body>
+  <head>
+    <link href="reset.css" rel="stylesheet"/>
+    <link href="./styles.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <div class="container">
+      <div class="inner-container">
+        <img class="new-york" src="./new-york.jpg" alt="My default image">
+        <div class="header"></div>
+        <div class="foo"></div>
+        <div class="header"></div>
+        <div class="foo"></div>
+        <div class="header"></div>
+      </div>
+    </div>
+  </body>
 </html>
