@@ -1,0 +1,23 @@
+:root {
+	background: yellow;
+}
+
+.container {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 200px;
+	background: pink;
+	transition: opacity .2s, transform .8s;
+  @starting-style {
+		transform: translate(0, 100vh);
+  }
+}
+
+iframe {
+	border: none;
+	width: 100%;
+	height: 100%;
+}
+
