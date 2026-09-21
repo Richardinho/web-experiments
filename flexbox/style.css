@@ -1,0 +1,260 @@
+.container {
+	margin: 10px;
+	padding: 10px;
+	background: lightgoldenrodyellow;
+}
+
+.box {
+	background: pink;
+	padding: 10px;
+}
+
+@scope(.one) {
+	.flex {
+		display: flex;
+	}
+
+	.inline-flex {
+		display: inline-flex;
+	}
+}
+
+@scope(.two) {
+	.row {
+		display: flex;
+		flex-direction: row;
+		gap: 10px;
+	}
+
+	.row-reverse {
+		display: flex;
+		flex-direction: row-reverse;
+		gap: 10px;
+	}
+
+	.column {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	.column-reverse {
+		display: flex;
+		flex-direction: column-reverse;
+		gap: 10px;
+	}
+}
+
+@scope(.three) {
+	.container {
+		width: 50%;
+		display: flex;
+		gap: 10px;
+	}
+
+	.wrap {
+		flex-wrap: wrap;
+	}
+
+	.nowrap {
+		flex-wrap: nowrap;
+	}
+
+	.wrap-reverse {
+		flex-wrap: wrap-reverse;
+	}
+}
+
+
+@scope(.four) {
+
+	.container {
+		display: flex;
+		gap: 10px;
+		background: seagreen;
+	}
+
+	.center {
+		justify-content: center;
+	}
+
+	.space-between {
+		justify-content: space-between;
+	}
+
+	.space-around {
+		justify-content: space-around;
+	}
+
+	.space-evenly {
+		justify-content: space-evenly;
+	}
+
+	.flex-start {
+		justify-content: flex-start;
+	}
+
+	.flex-end {
+		justify-content: flex-end;
+	}
+}
+
+@scope(.five) {
+
+	.container {
+		display: flex;
+		background: peachpuff;
+		height: 200px;
+		gap: 10px;
+	}
+
+	.flex-start {
+		align-items: flex-start;
+	}
+
+	.flex-end {
+		align-items: flex-end;
+	}
+
+	.center {
+		align-items: center;
+	}
+
+	.stretch {
+		align-items: stretch;
+	}
+
+	.baseline {
+		align-items: baseline;
+		.box-one {
+			font-size: 2rem;
+		}
+
+		.box-three {
+			font-size: 4rem;
+		}
+	}
+
+}
+
+@scope(.six) {
+	.container {
+		width: 50%;
+		gap: 10px;
+		display: flex;
+		flex-wrap: wrap;
+		height: 200px;
+	}
+
+	.center {
+		align-content: center;
+	}
+
+	.flex-start {
+		align-content: flex-start;
+	}
+
+	.flex-end {
+		align-content: flex-end;
+	}
+
+	.space-between {
+		align-content: space-between;
+	}
+
+	.space-around {
+		align-content: space-around;
+	}
+
+	.stretch {
+		align-content: stretch;
+	}
+}
+
+@scope(.seven) {
+	.container {
+		display: flex;
+		gap: 10px;
+		background: indianred;
+	}
+
+	.one {
+		order: 2;
+	}
+
+	.two {
+		order: 4;
+	}
+
+	.three {
+		order: 6;
+	}
+
+	.four {
+		order: 1;
+	}
+
+	.five {
+		order: 3;
+	}
+
+	.six {
+		order: 5;
+	}
+}
+
+@scope(.eight) {
+
+	.container {
+		display: flex;
+		background: lightblue;
+		gap: 10px;
+	}
+
+	.two {
+		flex-grow: 1;
+	}
+
+	.three {
+		flex-grow: 2;
+	}
+}
+
+@scope(.nine) {
+	.container {
+		display: flex;
+		background: blue;
+		gap: 10px;
+		justify-content: space-between;
+	}
+
+	.one { width: 80%; flex-shrink: 20; }
+
+	.two { width: 80%}
+}
+
+@scope(.ten) {
+	.container {
+		display: flex;
+		background: hotpink;
+		gap: 10px;
+	}
+
+	.one { flex-basis: 50px; }
+	.two { flex-basis: 100%; }
+}
+
+@scope(.eleven) {
+	.container {
+		display: flex;
+		background: hotpink;
+		height: 200px;
+		gap: 10px;
+		align-items: flex-start;
+	}
+
+	.three {
+		align-self: flex-end;
+	}
+}
+
