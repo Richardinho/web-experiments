@@ -1,0 +1,139 @@
+:root {
+	background: yellow;
+}
+
+@scope(.one) {
+	.container {
+		height: 100px;
+		min-width: 100px;
+		margin: 10px;
+	}
+
+	.grid {
+		display: grid;
+		background: pink;
+	}
+
+	.inline-grid {
+		display: inline-grid;
+		background: green;
+	}
+}
+
+@scope(.two) {
+	.container {
+		display: grid;
+		background: chartreuse;
+		padding: 20px;
+		gap: 10px;
+		grid-template-columns: 1fr 1fr 1fr;
+
+		div {
+			background: coral;
+		}
+	}
+}
+
+@scope(.three) {
+	.container {
+		display: grid;
+		background: chartreuse;
+		padding: 20px;
+		gap: 10px;
+		grid-template-columns: [one] 1fr [two] 1fr [three] 1fr [four];
+		grid-template-rows: [foo] 50px [bar] 50px [meh];
+
+		.box-1 {
+			background: red;
+			grid-column-start: two;
+			grid-column-end: four;
+			grid-row-start: 2;
+			grid-row-end: 3;
+		}
+
+		.box-2 {
+			background: blue;
+			grid-column-start: one;
+			grid-column-end: two;
+			grid-row-start: foo;
+			grid-row-end: meh;
+		}
+
+		.box-3 {
+			background: darkturquoise;
+			opacity: 0.8;
+			grid-column-start: 1;
+			grid-column-end: 3;
+			grid-row-start: 1;
+			grid-row-end: 2;
+		}
+	}
+}
+
+@scope(.four) {
+	.container {
+		display: grid;
+		background: lightblue;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 100px 100px;
+		gap: 10px;
+		justify-items: stretch;
+		align-items: start;
+
+		div {
+			background: coral;
+		}
+	}
+}
+
+@scope(.five) {
+	.container {
+		display: grid;
+		width: 300px;
+		height: 500px;
+		background: limegreen;
+		grid-template-rows: 200px 200px;
+		grid-template-columns: 100px 100px;
+		gap: 5px 10px;
+		place-content: end end;
+
+		div {
+			background: seagreen;
+		}
+	}
+}
+
+@scope(.six) {
+	.container {
+		display: grid;
+		padding: 20px;
+		background: lawngreen;
+		gap: 20px 15px;
+		grid-auto-columns: 60px;
+		grid-auto-flow: column dense;
+		grid-template-rows: auto auto;
+
+		div {
+			background: lavenderblush;
+			padding: 10px;
+		}
+	}
+}
+
+@scope(.seven) {
+	.container {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-auto-rows: 100px;
+		background: lightyellow;
+		padding: 10px;
+		width: 50%;
+		column-gap: 10px;
+		row-gap: 6px;
+
+		div {
+			background: lightseagreen;
+			padding: 10px;
+		}
+	}
+}
