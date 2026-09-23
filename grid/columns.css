@@ -1,0 +1,63 @@
+:root {
+	background: whitesmoke;
+}
+
+.code {
+	font-family: courier;
+	white-space: preserve;
+	border: solid 1px grey;
+	background: papayawhip;
+	padding: 10px;
+	margin: 10px;
+}
+
+.container {
+	margin: 10px;
+	display: grid;
+	background: pink;
+	gap: 10px;
+
+	div {
+		background: violet;
+	}
+}
+
+@scope(.one) {
+	.container {
+		grid-template-columns: repeat(3, 100px 1fr);
+	}
+}
+
+@scope(.two) {
+	.container {
+		grid-template-columns: minmax(400px, 50%) 400px;
+	}
+}
+
+@scope(.three) {
+	.container {
+		grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+		grid-template-rows: 20px;
+	}
+}
+
+@scope(.four) {
+	.container {
+		grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+		grid-template-rows: 20px;
+	}
+}
+
+@scope(.five) {
+	.container {
+		grid-template-columns: repeat(auto-fill, minmax(150px, 200px));
+		grid-template-rows: 20px;
+	}
+}
+
+@scope(.six) {
+	.container {
+		grid-template-columns: repeat(auto-fit, minmax(150px, 200px));
+		grid-template-rows: 20px;
+	}
+}

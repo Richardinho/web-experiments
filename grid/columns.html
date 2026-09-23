@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title></title>
+		<link href="columns.css" rel="stylesheet">
+	</head>
+	<body>
+		<h1>CSS Grid column experiments</h1>
+
+		<div class="one">
+			<h2>one: repeat()</h2>
+			<p>Using repeat() in grid-template-columns as a shorthand
+				for defining columns.
+			<div class="code">
+	grid-template-columns: repeat(3, 100px 1fr);
+			</div>
+			<div class="container">
+				<div>1</div>
+				<div>2</div>
+				<div>3</div>
+				<div>4</div>
+				<div>5</div>
+				<div>6</div>
+				<div>1</div>
+				<div>2</div>
+				<div>3</div>
+				<div>4</div>
+				<div>5</div>
+				<div>6</div>
+			</div>
+		</div>
+
+		<div class="two">
+			<h2>two: minmax()</h2>
+			<p>using minmax()</p>
+			<div class="code">
+	grid-template-columns: minmax(400px, 50%) 400px;
+			</div>
+			<div class="container">
+				<div>1</div>
+				<div>2</div>
+			</div>
+		</div>
+
+		<div class="three">
+			<h2>three: auto-fill</h2>
+			<p></p>
+			<div class="code">
+	grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+			</div>
+			<div class="container">
+				<div>1</div>
+				<div>2</div>
+				<div>3</div>
+				<div>4</div>
+				<div>5</div>
+
+				<div>6</div>
+				<div>7</div>
+				<div>8</div>
+				<div>9</div>
+
+				<div>1</div>
+				<div>2</div>
+				<div>3</div>
+				<div>4</div>
+				<div>5</div>
+			</div>
+		</div>
+
+		<div class="four">
+			<h2>four: auto-fit</h2>
+			<p></p>
+			<div class="code">
+	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+			</div>
+			<div class="container">
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+
+		<div class="five">
+			<h2>five: auto-fill</h2>
+			<p></p>
+			<div class="code">
+	grid-template-columns: repeat(auto-fill, minmax(150px, 200px));
+			</div>
+			<div class="container">
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+
+		<div class="six">
+			<h2>six: auto-fit</h2>
+			<p></p>
+			<div class="code">
+	grid-template-columns: repeat(auto-fit, minmax(150px, 200px));
+			</div>
+			<div class="container">
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+	</body>
+</html>
